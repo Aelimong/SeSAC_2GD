@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form tag</title>
+</head>
+<body>
+    <form>
+        ID <input type="text" placeholder="id">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="email" value="dofla0507@naver.com">
+        <label>
+            비밀번호
+            <input type="password" placeholder="password">
+        </label>
+        <br />
+        숫자 <input type="number" placeholder="300">
+        <br />
+        색상 <input type="color">
+        <br />
+        <input type="range">
+        <br />
+        <input type="file">
+        <br />
+        <input type="date">
+        <br />
+        <!-- 어떤 걸 누르면 다른 걸 동작하도록 만드는 것-->
+        <input type="button" value="버튼">
+        <br />
+        <!-- 아래 두가지는 form 양식을 서버로 제출하는 것-->
+        <input type="submit" value="버튼">
+        <br />
+        <button>버튼</button>
+
+        <!-- radio와 checkbox -->
+        <h5>다음 중 img 태그의 속성인 것은? (하나만 고르세요)</h5>
+        <input type="radio" name="radio"> title
+        <input type="radio" name="radio"> value
+        <input type="radio" name="radio"> alt
+        <input type="radio" name="radio"> mouse
+
+        <h5>다음 중 input의 타입 속성이 아닌 것은? (모두 고르시오)</h5>
+        <input type="checkbox" name="checkbox" id="checkbox_1" /> <label for="checkbox_1">text</label>
+        <input type="checkbox" name="checkbox" id="checkbox_2" /> <label for="checkbox_2">img</label>
+        <input type="checkbox" name="checkbox" id="checkbox_3"/> <label for="checkbox_3">click</label>
+        <input type="checkbox" name="checkbox" id="checkbox_4"/> <label for="checkbox_4">date</label>
+        <br />
+        <br />
+
+        <!-- select -->
+        <select>
+            <option value="">사이즈를 선택하세용</option>
+            <optgroup label="라지">
+                <option value="">XXL</option>
+                <option value="">XL</option>
+                <option value="">L</option>
+            </optgroup>
+            <optgroup label="스몰">
+                <option value="">S</option>
+                <option value="">XS</option>
+                <option value="">XXS</option>
+            </optgroup>
+        </select>
+        <br />
+        <br />
+
+        <!-- textarea -->
+        <textarea cols="30" rows="10" placeholder="하고싶은 말을 써주세요."></textarea>
+    </form>
+</body>
+</html>
