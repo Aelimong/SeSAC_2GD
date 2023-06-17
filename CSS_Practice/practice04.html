@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습3</title>
+  <link rel="stylesheet" href="./practice04.css">
+    <!-- 실습 3 가상 클래스 선택자
+      <h3> <textarea> <input type=“checkbox” /> <button> 
+      태그 이용해서 작성
+      1. 제목에 마우스 올렸을 때, 배경색과 글자색 원하는대로 변경하기
+      2. 건의 사항 작성란을 클릭하고 커서가 깜빡거릴 때, 배경색 변경하기
+      3. 체크했을 때, 체크박스에 대한 글씨 배경색 변경
+      4. 제출 버튼 클릭하는 순간 버튼의 색과 글자 색깔 변경하기
+    -->
+</head>
+<body>
+<main>
+  <div id="mainArea">
+    <h3>건의 사항을 적어주세요!</h3>
+    <textarea id="textArea" cols="50" rows="10" placeholder="건의 사항 🎈"></textarea>
+    <br />
+    <input type="checkbox" id="red" />
+    <label for="red">빨강</label>
+    <input type="checkbox" id="blue" />
+    <label for="blue">파랑</label>
+    <input type="checkbox" id="yellow" />
+    <label for="yellow">노랑</label>
+    <br />
+    <br />
+    <div id="submitArea">
+      <button class="submitBtn">제출</button>
+    </div>
+  </div>
+</main>
+</body>
+</html>

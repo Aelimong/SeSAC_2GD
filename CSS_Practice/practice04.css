@@ -1,0 +1,45 @@
+#mainArea {
+  width: 345px;
+}
+
+h3:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+#textArea:focus {
+  background-color: pink;
+}
+
+#red:checked + label {
+  background-color: red;
+  color: #ffffff;
+}
+
+#blue:checked + label {
+  background-color: blue;
+  color: #ffffff;
+}
+
+#yellow:checked + label {
+  background-color: yellow;
+  color: #000000;
+}
+
+.submitBtn {
+  background-color: #420bcd;
+  color: #ffffff;
+  border: 0px solid black;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+.submitBtn:active {
+  background-color: #dddddd;
+  color:#420bcd;
+}
+
+#submitArea {
+  display: flex;
+  justify-content: flex-end;
+}
