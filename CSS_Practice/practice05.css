@@ -1,0 +1,24 @@
+.stripes > div{
+  background-color: navy;
+  color: yellow;
+}
+
+/* .stripes div:first-child {
+  background-color: navy;
+} */
+
+.stripes > div:nth-child(4n+2) {
+  background-color: yellow;
+  color:navy;
+}
+
+/* stripes 클래스의 자식요소 중 3번째 div에 스타일 적용 */
+/* .stripes div:nth-of-type(3) {
+  background-color: navy;
+} */
+
+/* stripes 클래스의 3번째 자식 요소가 div라면 스타일 적용 */
+/* 
+.stripes div:nth-child(3) {
+  background-color: navy;
+} */

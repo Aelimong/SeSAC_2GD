@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+
+@font-face {
+  font-family: 'MBC1961GulimM';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-link {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 24px;
+}
+
+.font-import {
+  font-family: 'East Sea Dokdo', cursive;
+}
+
+.noonnu-font {
+  font-family: 'MBC1961GulimM', cursive;
+}
+
+.container {
+  width: 500px;
+  background-color: aliceblue;
+}
+
+.sentences {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: overline;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

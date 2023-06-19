@@ -39,3 +39,74 @@ input#rabbit:checked + label {
   background-color: pink;
   color: white;
 }
+
+/*
+  - E:first-child{} : E가 첫번째 자식이라면 선택
+  - E:last-child{} : E가 마지막 자식이라면 선택
+  - E:nth-child(n){} : E가 n번째 자식이라면 선택
+  - E:nth-of-type(n){} : E요소 중에 n번째를 선택
+  - E:not(XYZ){} : XYZ가 아닌 E요소를 선택
+*/
+
+/* zoo의 자식 요소들 모두 선택! */
+.zoo > * {
+  background-color: green;
+  color: white;
+  font-size: 20px;
+}
+
+/* zoo클래스의 마지막 자식이 li라면 스타일 적용! */
+.zoo > li:last-child {
+  background-color: #000000;
+}
+
+/* 첫번째 자식 요소가 h1이라 이 스타일은 적용이 안 됨...! */
+.zoo > li:first-child {
+  background-color: yellow;
+}
+
+/* li 태그가 첫번째 자식이 아니더라도 li 태그 중에 첫번째를 골라서 적용시켜라 */
+.zoo > li:nth-of-type(1) {
+  background-color: blue;
+}
+
+/* zoo 자식중에 어떤 태그라도 첫번째 자식에 적용하겠다! */
+.zoo > *:first-child {
+  background-color: yellowgreen;
+}
+
+/* odd -> 홀수만 선택함(1,3,5...2n+1번째) */
+.zoo > li:nth-child(odd) {
+  background-color: pink;
+}
+
+/*
+  가상 요소 선택자
+  - E::after, E::before {}
+  - content 속성 필수로 들어가야함👊👊
+*/
+
+.h3 {
+  background-color: yellow;
+}
+
+.h3::after {
+  content: "이것도 붙나?";
+  color: #dddddd;
+}
+
+.h3::before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 50px;
+  background-color: red;
+}
+
+.box::before {
+  content: "택시";
+}
+
+.box::after {
+  content: "빨리";
+}

@@ -1,0 +1,194 @@
+.d-block {
+  display: block;
+  background-color: pink;
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  padding: 30px;
+  /* margin 위아래는 서로 겹침 */
+  margin: 20px;
+}
+
+.d-inline {
+  display: inline;
+  background-color: skyblue;
+  border: 1px solid blue;
+  width: 100px;
+  height: 100px;
+  /* margin, padding 모두 옆으로만 늘어남! */
+  margin: 20px;
+  padding: 30px;
+}
+
+.d-inline-block {
+  display: inline-block;
+  background-color: lightgoldenrodyellow;
+  border: 1px solid lightgreen;
+  width: 100px;
+  height: 100px;
+  /* margin 위아래, 양옆영역은 상쇄되지 않음*/
+  margin: 20px;
+  padding: 30px;
+}
+
+/* min & max */
+.parent {
+  width: 300px;
+  height: 200px;
+  background-color: orange;
+}
+
+.parent .min {
+  min-width: 400px;
+  height: 100px;
+  background-color: red;
+}
+
+.parent .max {
+  max-width: 400px;
+  width: 350px;
+  height: 100px;
+  background-color: green;
+}
+
+
+.box {
+  background-color: pink;
+  border: 1px solid black;
+}
+
+.box-px {
+  width: 50px;
+  height: 50px;
+}
+
+/* body의 margin 상관 없이 가져옴 */
+.box-view {
+  width: 50vw;
+  height: 50vh;
+}
+
+/* percent는 부모 크기의 너비를 가져옴
+  - body에 margin 8px 걸려있어서 이 부분 제외하고 % 적용됨
+*/
+.box-per {
+  width: 50%;;
+  height: 50%;;
+}
+
+.rem {
+  font-size: 2rem;
+}
+
+/* 부모의 폰트 크기를 받아옴! */
+.em {
+  font-size: 2em;
+}
+
+.b-box{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.box1 {
+  background-color: blue;
+  border-width: 3px;
+  border-style: dashed;
+  border-color: black;
+}
+
+.box2 {
+  background-color: greenyellow;
+  border: 5px dotted forestgreen;
+}
+
+.box3 {
+  background-color: greenyellow;
+  border: 5px dotted forestgreen;
+}
+
+.box4 {
+  background-color: greenyellow;
+  border: 5px dotted forestgreen;
+}
+
+.square {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.rounded {
+  border-radius: 50px;
+  border-radius: 10%;
+  /* 단축 속성 */
+  border-radius: 5px 40px;
+  border-radius: 5px 20px 40px 20px;
+}
+
+.box-sizing {
+  padding: 20px;
+  border: 15px solid red;
+  background-color: orange;
+}
+
+.content-box {
+  /* 기본 값!!! */
+  box-sizing: content-box;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.d-none {
+  display: none;
+  background-color: red;
+}
+
+.invisible {
+  visibility: hidden;
+  background-color: orangered;
+}
+
+.opacity-0 {
+  /* 속성이 모두 살아있음!!! a 링크 연결 가능 */
+  opacity: 0.5;
+  background-color: tomato;
+}
+
+.disappear {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+
+.disappear:hover {
+  opacity: 0;
+}
+
+.square img[alt='푸'] {
+  width: 200px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* 넘칠 때만 스크롤이 보여짐 */
+.overflow-auto {
+  overflow: auto;
+}
+
+/* 항상 스크롤이 보임 */
+.overflow-scroll {
+  overflow: scroll;
+}
+
+/* 기본값!! 넘치도록 다 보여줌 */
+.overflow-visible {
+  overflow: visible;
+}
