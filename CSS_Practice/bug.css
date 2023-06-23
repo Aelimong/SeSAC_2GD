@@ -1,0 +1,73 @@
+.parent {
+  width: 400px;
+  height: 350px;
+  position: relative;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.circle1 {
+  background-color: blue;
+  top: 90px;
+  left: 50px;
+  position: absolute;
+}
+
+.circle2 {
+  background-color: rgb(41, 41, 255);
+  top: 140px;
+  left: 100px;
+  position: absolute;
+}
+
+.circle3 {
+  background-color: rgb(73, 73, 253);
+  top: 160px;
+  left: 150px;
+  position: absolute;
+}
+
+.circle4 {
+  background-color: rgb(157, 157, 255);
+  top: 200px;
+  left: 190px;
+  position: absolute;
+}
+
+.circle5 {
+  background-color: rgb(172, 172, 253);
+  top: 240px;
+  left: 240px;
+  position: absolute;
+  z-index: 5;
+}
+
+.grass {
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+}
+
+.circle-white {
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.circle-black {
+  width: 16px;
+  height: 16px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+}

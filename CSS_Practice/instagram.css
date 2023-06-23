@@ -1,0 +1,38 @@
+.gradient-div {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, yellow, orange, red, darkorchid 80%);
+  position: relative;
+}
+
+.img-back {
+  width: 320px;
+  height: 320px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.img-pooh {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-image: url("../CSS/img/pooh.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}

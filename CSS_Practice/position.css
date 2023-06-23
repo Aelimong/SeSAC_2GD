@@ -1,0 +1,71 @@
+body {
+  height: 2000px;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: lightgray;
+  border: 1px solid black;
+  position: relative;
+}
+
+.container div {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.item1 {
+  background-color: lightcoral;
+  border: 1px solid coral;
+  position: relative;
+  top: 30px;
+  left: 50px;
+}
+
+.item2 {
+  background-color: lightblue;
+  border: 1px solid blue;
+  /* 
+  - 부모 요소가 static이면 적용되지 않음!!!
+  - 흐름을 깨지 않는 relative를 부모의 position 속성으로 잘둠
+  */
+  position: absolute;
+  right: 30px;
+  bottom: 100px;
+}
+
+.item3 {
+  background-color: lightgreen;
+  border: 1px solid green;
+  position: fixed;
+  right: 100px;
+  top: 100px;
+}
+
+.item4 {
+  background-color: lightcoral;
+  border: 1px solid coral;
+  position: absolute;
+  z-index: 2;
+}
+
+.item5 {
+  background-color: lightblue;
+  border: 1px solid blue;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 1;
+}
+
+.item6 {
+  background-color: lightgreen;
+  border: 1px solid green;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  z-index: 0;
+}
