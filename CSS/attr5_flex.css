@@ -1,0 +1,132 @@
+.container {
+  width: 400px;
+  height: 800px;
+  margin: 0 auto;
+  background-color: lightgray;
+  display: flex;
+
+  /* flex-direction
+    - row 수평 정렬 (좌 -> 우)
+    - row-reverse 수평 정렬 (우 -> 좌)
+    - column 수직 정렬 (위 -> 아래)
+    - column-reverse 수직 정렬 (아래 -> 위)
+  */
+  flex-direction: row;
+  /* flex-direction: row-reverse;
+  flex-direction: column;
+  flex-direction: column-reverse; */
+
+  /* justify-content : '주축'에 대한 정렬 방법
+      -> 아이템들을 어떻게 배치 시킬 것인지
+      - flex-start 아이템들을 주축의 시작지점 기준으로 나열
+      - flex-end 아이템들을 주축의 끝 지점 기준으로 나열
+      - center 주축 방향으로 중앙 정렬
+      - space-between 처음과 마지막 아이템들을 양 끝에 붙이고 나머지 영역은 똑같이 나눠가짐
+      - space-around 양끝 영역이 1이라면, 아이템과 아이템 사이의 영역은 2
+      - space-evenly 모든 영역 공평하게 나눠가짐
+  */
+
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+
+  /* flex-wrap: 아이템들을 줄바꿈 시킬지 말지 결정
+    - wrap 줄바꿈 (자신의 세로 높이를 지키면서 다음 줄로 넘어감)
+    - nowrap(default) 줄바꿈 안 됨
+    - wrap-reverse 줄바꿈을 하는데, 아이템을 역순으로 배치 
+  */
+  /* flex-wrap: nowrap; */
+  /* flex-wrap: wrap; */
+  /* flex-wrap: wrap-reverse; */
+
+  /* align-items : 교차축에 대해서 item을 배치하는 방법
+    (높이 지정되면 안 됨???
+    - stretch(default) 컨테이너 내부에 할당된 교차축의 크기만큼 늘어남
+    - flex-start
+    - flex-end
+    - center
+  */
+  /* align-items: stretch; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* align-items: center; */
+
+  /* align-content : 교차축에 대한 여러줄 정렬 -> justify 동일함
+    (flex-wrap이 wrap일 때 적용됨(두 줄 이상일 때)
+    - flex-start
+    - flex-end
+    - center
+    - space-between
+    - space-around
+    - space-evenly
+    - stretch(default)
+  */
+  flex-wrap: wrap;
+  align-content: flex-start;
+  /* align-content: flex-end; */
+  /* align-content: center; */
+  /* align-content: space-between; */
+  /* align-content: space-around; */
+  /* align-content: space-evenly; */
+}
+
+.items {
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 100px;
+}
+
+.item1 {
+  background-color: lightcoral;
+}
+
+.item2 {
+  background-color: lightsalmon;
+}
+
+.item3 {
+  background-color: lightyellow;
+}
+
+.item4 {
+  background-color: lightgreen;
+}
+
+.item5 {
+  background-color: lightskyblue;
+}
+
+/* flex item 속성 */
+.container2 {
+  background-color: #333;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 1rem 0;
+  display: flex;
+}
+
+.container2 .items {
+  width: 200px;
+  /* flex-basis: 50px; */
+}
+
+.container2 .item2 {
+  /* font-size: 12px;
+  line-height: 1; */
+  /* flex-grow: 1; */
+  flex-shrink: 2;
+}
+
+.container2 .item3 {
+  /* order는 보이는 순서만 바뀌는 것뿐...! html 구조는 변하지 않음 */
+  /* 0보다 작은 값을 넣으면 무조건 맨 앞으로 */
+  /* order: 1; */
+  /* align-self: center; */
+  /* flex-grow: 2; */
+  flex-shrink: 3;
+}

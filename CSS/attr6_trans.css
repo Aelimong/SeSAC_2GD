@@ -1,0 +1,89 @@
+.img-box {
+  background-color: #9494ed;
+  width: 400px;
+  height: 200px;
+}
+
+img {
+  /* 부모의 픽셀을 가지고 오는 것!? img-box 크기 설정하면 자동으로 안 맞춰지나? */
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 1px solid red;
+}
+
+img:hover {
+  /* 
+    여러개를 쓸 때는 아래 순서로 적어줘야한다!!!
+    1. perpective()
+    2. translate()
+    3. scale()
+    4. ratate()
+    5. skew()
+  */
+
+  /* 이동함수 */
+  /* transform: translate(200px, 200px); */
+  transform: translateX(200px);
+  transform: translateY(200px);
+
+  /* 크기함수 */
+  transform: scale(2);
+  transform: scaleX(2);
+  transform: scaleY(0.7);
+
+  transform: translateX(200px) scale(2);
+
+  /* 회전함수 */
+  transform: rotate(-90deg);
+  transform: perspective(50px) rotateX(45deg);
+  transform: perspective(500px) rotateY(45deg);
+
+  transform: perspective(500px) rotateY(180deg);
+  /* backface-visibility: visible; default */
+  backface-visibility: hidden;
+
+  /* 기울임 함수 */
+  transform: skew(30deg, 0deg);
+  transform: skewX(60deg);
+  transform: skewY(60deg);
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  margin-bottom: 1rem;
+}
+
+.box1:hover {
+  /* transition
+    - transition-property: 속성 이름
+      어떤 속성에 transition 효과를 줄건지
+    - transition-duration(필수 속성⭐⭐)
+      몇초 동안 변화가 일어날지
+    - transition-timing-function: 시간 함수
+      ease(default)
+    - transition-delay: 동작의 시작 시간을 얼마나 늦출지
+  */
+  background-color: red;
+  width: 200px;
+  transition-property: width;
+  transition-duration: 1s;
+  /* transition-timing-function: ease-in-out; */
+  transition-delay: 3s;
+
+  /* 단축속성 사용가능 transition: property duration timing-function delay; */
+}
+
+.box2 {
+  transition: all 2s ease 1s;
+  /* transition: property duration timing-function delay; */
+}
+
+.box2:hover {
+  opacity: 0;
+  height: 150px;
+  background-color: aquamarine;
+  transform: translateX(50px);
+}
