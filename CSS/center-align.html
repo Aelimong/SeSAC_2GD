@@ -32,6 +32,30 @@
         top: 0;
         bottom: 0;
       }
+
+      /* flex를 이용한 가운데 정렬 */
+      .parent2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .parent2 > .child {
+      }
+
+      /* position & transform */
+      .parent3 {
+        /* child에게 기준점을 제공한 것임 */
+        position: relative;
+      }
+
+      .parent3 > .child {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        /* 여기에서 50%는 child의 50%임 */
+        transform: translate(-50%, -50%);
+      }
     </style>
   </head>
   <body>

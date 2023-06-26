@@ -1,0 +1,94 @@
+/* COMMON */
+@import url("./font.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "NanumBarunGothic", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* HEADER */
+header {
+  /* body의 100% */
+  width: 100%;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  background-color: #ffffff;
+}
+
+/* header util-menu */
+header .util-menu {
+  height: 40px;
+  background-color: rgb(238, 238, 238);
+}
+
+header .util-menu .inner {
+}
+
+/* li의 컨테이너인 ul에 display flex 주면 됨! */
+header .util-menu .inner ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header .util-menu .inner ul li {
+}
+
+header .util-menu .inner ul li a {
+  color: rgb(51, 51, 51);
+  margin-right: 20px;
+  font-size: 14px;
+  display: block;
+}
+
+header .util-menu .inner ul li:last-child a {
+  background-color: #2f1c11;
+  width: 60px;
+  height: 40px;
+  background-image: url("../img/bean.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* header main-menu */
+header .main-menu {
+}
+
+header .main-menu .inner {
+}
+
+/* 로고 */
+header .main-menu .inner .logo {
+}
+header .main-menu .inner .logo a {
+}
+
+/* 메뉴 */
+header .main-menu .inner .menu {
+}
+
+header .main-menu .inner .menu li {
+}
+
+header .main-menu .inner .menu li a {
+}
+
+/* search */
+header .main-menu .inner .search i {
+}

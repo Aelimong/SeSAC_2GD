@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>원형 움직이는 실습</title>
+    <style>
+      /* body {
+        margin: 0;
+        padding: 0;
+      } */
+
+      .circle {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(to top right, yellow, coral);
+        border-radius: 50%;
+        animation: moveBall 3s infinite;
+
+        position: absolute;
+      }
+
+      @keyframes moveBall {
+        0% {
+          /* transform: translate(0, 0); */
+          left: 0;
+          top: 0;
+        }
+
+        25% {
+          /* transform: translate(calc(100vw - 100px), 0); */
+          left: calc(100vw - 100px);
+          top: 0;
+        }
+
+        50% {
+          /* transform: translate(calc(100vw - 100px), calc(100vh - 100px)); */
+          left: calc(100vw - 100px);
+          top: calc(100vh - 100px);
+        }
+
+        75% {
+          /* transform: translate(0, calc(100vh - 100px)); */
+          left: 0;
+          top: calc(100vh - 100px);
+        }
+
+        100% {
+          /* transform: translate(0, 0); */
+          left: 0;
+          top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle"></div>
+  </body>
+</html>

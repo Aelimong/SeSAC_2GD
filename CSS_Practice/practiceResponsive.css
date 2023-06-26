@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.container .box {
+  width: 150px;
+  height: 150px;
+  background-color: black;
+  border: 1px solid red;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 699px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container .box {
+    background-color: blue;
+  }
+}

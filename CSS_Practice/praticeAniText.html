@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자 옆으로 움직이는 과제</title>
+    <style>
+      /* body {
+        margin: 0;
+      } */
+
+      p {
+        background-color: bisque;
+        /* position: relative; */
+        animation: slideTextToLeft 2s;
+      }
+
+      @keyframes slideTextToLeft {
+        from {
+          margin-left: 100%;
+          /* body의 너비를 받아오는 것!! */
+          width: 300%;
+          /* width: 230vw;
+          left: 230vw; */
+        }
+        to {
+          margin-left: 0;
+          width: 100%;
+          /* width: 100vw;
+          left: 0; */
+          animation-timing-function: ease-out;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      "As I relax on the sofa and gaze around a room a thought hits me: this is
+      exactly the place I've been looking for all my life. A little hideaway in
+      some sinkhole somewhere. I'd always thought of it as a secret, imaginary
+      place, and can barely believe that it actually exists. I close my eyes and
+      take a breath, and wonder of it all settles over me like a gentle cloud."
+    </p>
+  </body>
+</html>

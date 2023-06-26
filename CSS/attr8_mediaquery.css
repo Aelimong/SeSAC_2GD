@@ -1,0 +1,42 @@
+body {
+  background-color: palevioletred;
+}
+
+h2 {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-color: magenta;
+  }
+
+  h1 {
+    color: #fff;
+  }
+}
+
+/* @media screen and (min-width: 500px) {
+  body {
+    background-color: rgb(124, 71, 0);
+  }
+} */
+
+@media (max-width: 300px) {
+  body {
+    background-color: greenyellow;
+  }
+  h1 {
+    display: none;
+  }
+  h2 {
+    display: block;
+  }
+}
+
+/* 반응형 웹페이지를 만들 때
+  핸드폰용 페이지를 만들지, 컴퓨터용 페이지를 만들지 결정한 후
+
+  먼저 만드는 페이지가 큰 화면이라면 max-width
+  먼저 만드는 페이지가 작은 화면이라면 min-width를 사용
+*/
