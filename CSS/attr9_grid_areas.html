@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid areas</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        height: 100vh;
+        width: 100%;
+        background-color: #ffdfde;
+        display: grid;
+
+        grid-template-areas:
+          "header1 header2 header3"
+          "nav main aside"
+          "footer1 footer2 footer3";
+        gap: 10px;
+      }
+
+      .item {
+        background-color: #6a7ba2;
+      }
+      .item1 {
+        grid-area: header1;
+      }
+      .item2 {
+        grid-area: header2;
+        background-color: transparent;
+      }
+      .item3 {
+        grid-area: header3;
+      }
+      .item4 {
+        grid-area: nav;
+      }
+      .item5 {
+        grid-area: main;
+      }
+      .item6 {
+        grid-area: aside;
+      }
+      .item7 {
+        grid-area: footer1;
+      }
+      .item8 {
+        grid-area: footer2;
+      }
+      .item9 {
+        grid-area: footer3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- .container>.item.item$*9 -->
+    <div class="container">
+      <div class="item item1">A</div>
+      <div class="item item2">B</div>
+      <div class="item item3">C</div>
+      <div class="item item4">D</div>
+      <div class="item item5">E</div>
+      <div class="item item6">F</div>
+      <div class="item item7">G</div>
+      <div class="item item8">H</div>
+      <div class="item item9">I</div>
+    </div>
+  </body>
+</html>

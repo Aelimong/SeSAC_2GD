@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid-areas</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-color: aliceblue;
+        display: grid;
+        grid-template-areas:
+          "header header header header"
+          "aside1 section1 section1 aside2"
+          "aside1 section2 section3 aside2"
+          "footer footer footer footer";
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+      }
+
+      .item1 {
+        grid-area: header;
+        background-color: #f94144;
+      }
+
+      .item2 {
+        grid-area: aside1;
+        background-color: #f3722c;
+      }
+
+      .item3 {
+        grid-area: section1;
+        background-color: #f9c74f;
+      }
+      .item4 {
+        grid-area: section2;
+        background-color: #f8961e;
+      }
+
+      .item5 {
+        grid-area: section3;
+        background-color: #90be6d;
+      }
+
+      .item6 {
+        grid-area: aside2;
+        background-color: #43aa8b;
+      }
+
+      .item7 {
+        grid-area: footer;
+        background-color: #4444ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">#F94144</div>
+      <div class="item item2">#F3722C</div>
+      <div class="item item3">#F9C74F</div>
+      <div class="item item4">#43AA8B</div>
+      <div class="item item5">#F8961E</div>
+      <div class="item item6">#90BE6D</div>
+      <div class="item item7">#4444FF</div>
+    </div>
+  </body>
+</html>

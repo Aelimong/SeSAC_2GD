@@ -24,6 +24,10 @@ a {
 
 /* HEADER */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
   /* body의 100% */
   width: 100%;
   border-bottom: 1px solid rgb(238, 238, 238);
@@ -68,27 +72,80 @@ header .util-menu .inner ul li:last-child a {
 
 /* header main-menu */
 header .main-menu {
+  height: 100px;
 }
 
 header .main-menu .inner {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* 로고 */
 header .main-menu .inner .logo {
+  /* .inner flex의 align-items : stretch 기본 속성 때문에 높이가 늘어나는 것 */
+  width: 100px;
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px;
 }
 header .main-menu .inner .logo a {
 }
 
 /* 메뉴 */
 header .main-menu .inner .menu {
+  display: flex;
+  align-items: center;
 }
 
 header .main-menu .inner .menu li {
+  padding: 0 31px 0 32px;
 }
 
 header .main-menu .inner .menu li a {
+  color: #2f1c11;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.025em;
+}
+
+header .main-menu .inner .menu li a:hover {
+  color: #d47632;
 }
 
 /* search */
-header .main-menu .inner .search i {
+header .main-menu .inner .search {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #d47632;
+  margin-right: 30px;
+}
+
+header .main-menu .inner .search i:hover {
+  cursor: pointer;
+}
+
+/* main */
+main {
+  margin-top: 140px;
+}
+
+/* main summer-new */
+main .summer-new {
+  width: 100%;
+}
+
+/* main promotion */
+main .promotion {
+  width: 100%;
+}
+
+main .summer-new a img,
+main .promotion a img {
+  display: block;
+  width: 100%;
+  max-width: 1400px;
+  min-width: 1200px;
+  margin: 0 auto;
 }

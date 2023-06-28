@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid-column과 grid-rows</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(222, 222, 222);
+
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: (6, 1fr);
+      }
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item1 {
+        background-color: #f94144;
+        grid-column: 1 / span 6;
+      }
+
+      .item2 {
+        background-color: #f3722c;
+        grid-row: 2 / 4;
+      }
+
+      .item3 {
+        background-color: #f9c74f;
+        grid-column: 2 / 6;
+      }
+      .item4 {
+        background-color: #f8961e;
+        grid-row: 2 / 4;
+        grid-column: 6 / 7;
+      }
+
+      .item5 {
+        background-color: #90be6d;
+        grid-column: 4 / 6;
+      }
+
+      .item6 {
+        background-color: #43aa8b;
+      }
+
+      .item7 {
+        background-color: #4444ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">#F94144</div>
+      <div class="item item2">#F3722C</div>
+      <div class="item item3">#F9C74F</div>
+      <div class="item item4">#43AA8B</div>
+      <div class="item item5">#F8961E</div>
+      <div class="item item6">#90BE6D</div>
+      <div class="item item7">#4444FF</div>
+    </div>
+  </body>
+</html>
