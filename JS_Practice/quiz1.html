@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quiz1</title>
+    <style>
+      h3 {
+        background-color: black;
+        text-align: center;
+        font-weight: 700;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 민트 초코는 맛없다! -->
+    <h3>1. 태그 내부의 글자 변경해보기</h3>
+    <div>민트 초코는 <span>맛있다 >_<</span></div>
+    <hr />
+    <h3>2. 속성 변경해보기</h3>
+    <img src="./images/pooh.png" alt="pooh" width="300" />
+    <p>이요르</p>
+    <script>
+      // 1. 민트 초코는 맛없다로 변경
+      let divText = document.querySelector("div");
+      let spanText = document.querySelector("span");
+      //console.log(text);
+      //divText.innerHTML = "민트 초코는 <span>맛없다 >_<</span>";
+      spanText.innerText = "맛없다 >_<";
+
+      // 2. img 태그
+      /*
+        - src 'eeyore.png'로 변경
+        - alt '이요르'로 변경
+        - 가로 크기 150으로 변경
+      */
+      let poohImg = document.querySelector("img");
+      poohImg.src = "./images/eeyore.png";
+      poohImg.alt = "이요르";
+      poohImg.width = "150";
+    </script>
+  </body>
+</html>
