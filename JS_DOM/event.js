@@ -48,11 +48,98 @@ btn4.addEventListener("click", changeBtnColor);
 
 /* click 외의 많은 동작들 */
 window.addEventListener("scroll", () => {
-  console.log(scrollY);
+  //console.log(scrollY);
   if (scrollY > 898) {
     document.querySelector(".pos").style.opacity = "1";
   } else {
     document.querySelector(".pos").style.opacity = "0";
   }
 });
-console.log(window);
+
+//console.log(window);
+
+/* 이벤트 객체 */
+// 해당 이벤트에 대한 정보 -> 이벤트 객체
+const btn = document.querySelector("button");
+const input = document.querySelector("input");
+
+btn.addEventListener("click", (e) => {
+  //console.log(e);
+});
+
+input.addEventListener("keydown", (e) => {
+  //console.log(e.key);
+  //console.log(e.code);
+
+  // 방향키 위 아래 왼쪽 오른쪽을 누르면
+  // 각각 누를 때마다 up, down, left, right
+  switch (e.key) {
+    case "ArrowUp":
+      console.log("up");
+      break;
+    case "ArrowDown":
+      console.log("down");
+      break;
+    case "ArrowRight":
+      console.log("right");
+      break;
+    case "ArrowLeft":
+      console.log("left");
+      break;
+    default:
+      console.log("others");
+      break;
+  }
+});
+
+// 변경 이벤트
+const chgInput = document.getElementById("change-input");
+
+chgInput.addEventListener("input", (e) => {
+  console.log("변경중!!!");
+  let div = document.querySelector(".box");
+  div.innerHTML = chgInput.value;
+
+  /*
+  input: 현재 input에 변경사항이 존재하는 순간을 계속 인식
+  실시간으로 바로 반영할 수 있음
+
+  shift, ctrl 등 입력값이 변하지 않는다면 이벤트 발생 X
+  */
+});
+
+chgInput.addEventListener("change", (e) => {
+  // 'change' : input 에 변경이 일어나고
+  // 다른 요소를 클릭해서 focus out 시키면 이벤트 발생됨
+  console.log("변경되었어요!!!");
+});
+
+// 폼이 제출되는 이벤트
+// 'submit' form에 적용하는 이벤트
+const todoForm = document.querySelector("#todo-list");
+const todos = document.querySelector(".todos");
+
+todoForm.addEventListener("submit", (e) => {
+  //폼이 실제로 제출되지 않도록 이벤트를 막는 것
+  //새로고침 방지
+  e.preventDefault();
+
+  const todoInput = document.querySelector("[name='todo']");
+  let todo = todoInput.value;
+
+  //공백 정규식
+  let pattern = /\s/g;
+
+  // 빈칸이나 공백 문자가 들어왔을 때는 추가하고 싶지 않다면?
+  if (todo === "" || todo.match(pattern)) {
+    alert("빈칸이나 공백문자는 입력할 수 없습니다!");
+    todo = "";
+  } else {
+    const li = document.createElement("li");
+    li.append(todo);
+    todos.append(li);
+
+    // append 하고 input 칸 비워주기!!
+    todo = "";
+  }
+});
