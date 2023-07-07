@@ -29,41 +29,34 @@
       // TODO: practice13_설명.png 이미지의 조건을 만족하는 js 코드 작성
       // cal(), reset() 함수를 미리 정의해두었습니다.
 
-      const value1 = document.getElementById("value1");
-      const value2 = document.getElementById("value2");
-      const operator = document.getElementById("operator");
-      const result = document.getElementById("result");
-
-      function checkOperator() {
-        if (
-          operator.value === "+" ||
-          operator.value === "-" ||
-          operator.value === "*" ||
-          operator.value === "/"
-        ) {
-          return true;
-        } else {
-          return false;
-        }
-      }
-
       // [계산] 버튼 클릭시 cal() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
       function cal() {
-        if (checkOperator()) {
-          result.value = eval(value1.value + operator.value + value2.value);
+        let value1 = Number(document.getElementById("value1").value);
+        let value2 = Number(document.getElementById("value2").value);
+        let operator = document.querySelector("#operator").value;
+
+        let result = 0;
+
+        if (operator === "+") {
+          result = value1 + value2;
+        } else if (operator === "-") {
+          result = value1 - value2;
+        } else if (operator === "*") {
+          result = value1 * value2;
+        } else if (operator === "/") {
+          result = value1 / value2;
         } else {
-          alert("잘못 입력 하셨습니다...! + - * / 중에 입력해주세요.");
-          operator.focus();
-          return;
+          result = "잘못 입력 하셨습니다...! + - * / 중에 입력해주세요.";
         }
+        document.getElementById("result").value = result;
       }
 
       // [초기화] 버튼 클릭시 reset() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
       function reset() {
-        value1.value = "";
-        value2.value = "";
-        operator.value = "";
-        result.value = "";
+        document.getElementById("value1").value = "";
+        document.getElementById("value2").value = "";
+        document.getElementById("operator").value = "";
+        document.getElementById("result").value = "";
       }
     </script>
   </body>
