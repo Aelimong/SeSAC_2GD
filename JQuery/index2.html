@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery2</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./index2.js"></script>
+  </head>
+  <body>
+    <h1>JQ 메소드</h1>
+    <h2>val()</h2>
+    <input type="text" />
+    <button type="button" onclick="getValue();">값 가져오기</button>
+    <button type="button" onclick="setValue();">값 설정하기</button>
+    <hr />
+
+    <h2>css()</h2>
+    <span>안녕하세요</span>
+    <br />
+    <button type="button" onclick="changeCssJS();">js로 변경</button>
+    <button type="button" onclick="changeCssJQ();">jq로 변경</button>
+    <button type="button" onclick="getCssJQ();">jq로 CSS 가져오기</button>
+    <hr />
+
+    <h2>attr()</h2>
+    <a href="https://www.google.com" target="_blank">Google</a>
+    <br />
+    <button type="button" onclick="changeAttrJS();">js로 변경</button>
+    <button type="button" onclick="changeAttrJQ();">jq로 변경</button>
+    <hr />
+
+    <h2>text()</h2>
+    <p class="p-text">안녕하세요!!!!</p>
+    <button type="button" onclick="changeTextJS();">js로 변경</button>
+    <button type="button" onclick="changeTextJQ();">jq로 변경</button>
+    <hr />
+
+    <h2>html()</h2>
+    <p class="p-html">안녕하세요!!!!</p>
+    <button type="button" onclick="changeHtmlJS();">js로 변경</button>
+    <button type="button" onclick="changeHtmlJQ();">jq로 변경</button>
+    <hr />
+
+    <h2>요소 추가</h2>
+    <h4>요소 추가 : append()</h4>
+    <h4>요소 추가 : prepend()</h4>
+    <h4>요소 추가 : before()</h4>
+    <h4>요소 추가 : after()</h4>
+
+    <h2>요소 탐색</h2>
+    <h2>클래스 조작</h2>
+  </body>
+</html>
