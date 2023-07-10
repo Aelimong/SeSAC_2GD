@@ -46,6 +46,10 @@ header .inner .menu li {
 }
 
 /* 768px 이하일 때의 header */
+header .inner i.fa-bars {
+  display: none;
+}
+
 header .small-menu {
   display: none;
   padding: 0;
@@ -72,7 +76,16 @@ header .small-menu li:hover {
     height: 60px;
   }
 
+  header .inner {
+    display: flex;
+    justify-content: center;
+  }
+
   header .small-menu {
+    /* display: block; */
+  }
+
+  header .show-menu {
     display: block;
   }
 
@@ -80,10 +93,23 @@ header .small-menu li:hover {
     display: none;
   }
 
-  header .inner i {
+  header .inner i.fa-umbrella-beach {
     font-size: 30px;
     left: 50%;
     transform: translate(-50%);
     line-height: 60px;
+  }
+
+  header .inner i.fa-bars {
+    display: block;
+    font-size: 20px;
+    right: 0%;
+    line-height: 60px;
+    cursor: pointer;
+    color: #ffffff;
+  }
+
+  header .small-menu i {
+    background-color: bisque;
   }
 }
