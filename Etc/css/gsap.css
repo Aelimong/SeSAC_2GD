@@ -1,0 +1,51 @@
+@import url(./normalize.css);
+
+body {
+  overflow-x: hidden;
+}
+.section1 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(skyblue, #ffff0084);
+}
+.section1 .cloud {
+  width: 35vw;
+  position: absolute;
+}
+
+.section1 .cloud1 {
+  left: 10vw;
+}
+.section1 .cloud2 {
+  left: 60vw;
+  width: 50vw;
+}
+
+.section1 .sea {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  /* 바다는 항상 앞에 */
+  z-index: 1;
+}
+.section1 .sun {
+  position: absolute;
+  width: 20vw;
+  top: 10px;
+  right: 10vw;
+}
+
+/* section2 */
+.section2 {
+  position: relative;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+}
+
+.section2 div {
+  color: orange;
+  text-align: center;
+  font: 700 8vw/100vh "arial";
+}

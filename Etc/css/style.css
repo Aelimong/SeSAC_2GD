@@ -1,0 +1,18 @@
+/* body margin: 0 과 같은 기본값이 정해져 있음 */
+/* @import url("/Etc/css/normalize.css"); */
+
+/* 모든 걸 초기화 시키고 나만의 CSS를 적용하고 싶다! 할 때 사용 */
+@import url("/Etc/css/reset.css");
+
+/* html 태그에 적용되는 기본 스타일! */
+@import url("/Etc/css/root.css");
+
+h1 {
+  margin: calc(var(--base-space) * 2) 0;
+  background-color: var(--main-green);
+  color: var(--text-black-600);
+}
+
+h2 {
+  background-color: var(--main-yellow);
+}

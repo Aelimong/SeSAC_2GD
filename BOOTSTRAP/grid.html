@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap - grid</title>
+    <!-- Bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!--
+      container 클래스
+      - 기본적인 레이아웃 요서
+      - grid 시스템 사용
+
+      .container : 일정한 inner의 범위를 가지고 있는 컨테이너
+      .container-fruid : 유동 컨테이너
+    -->
+    <h1 class="text-center">Grid</h1>
+    <h2 class="text-center">container</h2>
+
+    <div class="container bg-danger">container</div>
+    <div class="container-fruid bg-warning">container-fruid</div>
+
+    <!-- row 안에 col 만들어야합니다! -->
+    <div class="container">
+      <div class="row bg-info">
+        <div class="col">col</div>
+        <div class="col bg-secondary">col</div>
+        <div class="col">col</div>
+      </div>
+      <div class="row bg-primary mt-1">
+        <div class="col bg-danger">col</div>
+        <div class="col bg-warning">col</div>
+        <div class="col bg-success">col</div>
+        <div class="col bg-primary">col</div>
+        <div class="col bg-info">col</div>
+        <div class="col bg-dark">col</div>
+      </div>
+    </div>
+    <br />
+    <!-- col-$ 클래스 작성해보기-->
+    <div class="container">
+      <div class="row">
+        <div class="col-2 bg-danger">col</div>
+        <div class="col-2 bg-warning">col</div>
+        <div class="col-2 bg-success">col</div>
+        <!-- 12를 넘으면 다음줄로 넘어감 -->
+        <!-- <div class="col-10 bg-success">col</div> -->
+      </div>
+    </div>
+    <br />
+
+    <div class="container">
+      <div class="row">
+        <div class="bg-primary col-8 col-md-4 col-lg-10 col-xl-6">col</div>
+        <div class="bg-info col-4 col-md-8 col-lg-2 col-xl-6">col</div>
+      </div>
+    </div>
+    <br />
+    <!--
+      col-$ : 화면크기 가장 작을 때 : < 576px
+      col-sm-$ : 화면 크기 >= 576px
+      col-md-$ : 화면 크기 >= 768px
+      col-lg-$ : 화면 크기 >= 992px
+      col-xl-$ : 화면 크기 >= 1200px
+    -->
+
+    <!-- 평소 : 768보다 클때는 1:1:1로 차지하고 있다가 768보다 작아지면 두 줄로 변경
+    - 첫번째 행은 col 하나가 전체 차지
+    - 두번째 행은 두 개의 col이 반반씩 나눠서
+    
+    576보다 작아지면 col 세개를 세줄로 변경-->
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-md-4 bg-dark text-white">col</div>
+        <div class="col-12 col-sm-6 col-md-4 bg-primary text-white">col</div>
+        <div class="col-12 col-sm-6 col-md-4 bg-success text-white">col</div>
+      </div>
+    </div>
+  </body>
+</html>
